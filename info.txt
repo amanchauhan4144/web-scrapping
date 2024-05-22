@@ -1,0 +1,69 @@
+playwright over pupeteer 
+
+1. cross browser compatibility 
+2. multiple language support 
+3. multiple browser context 
+4. waitfortimeout imitates human behaviour 
+
+
+security features which can be used to avoid ban  -
+
+1. Imitate human behaviour like making requests at random time 
+
+2. rotating proxies
+
+3. rotating user agent information 
+
+4. Rate limit (429) so retry after some time 
+
+5. wait for timeout 
+
+Different selectors in playwright which are quite common
+
+1. page.getByRole() 
+2.page.getByText()
+3.page.getByLabel() 
+4.page.getByPlaceholder()
+5.page.getByAltText()
+6.page.getByTitle()
+
+Other Locators -
+
+Playwright-specific Selectors
+
+#  advanced selectors like :has, :is, and :text-is
+Page Lifecycle Event
+
+#waitForLoadState, waitForEvent, and on.
+#  Playwright supports relative selectors, 
+await page.locator('input:right-of(:text("Username"))').fill('value');
+
+1. CSS locator
+
+await page.locator('css=button').click();
+
+2.CSS: matching by text
+
+await page.locator(':has-text("Playwright")').click();
+
+custom pseudo-classes like :visible, :has-text(), :has(), :is(), :nth-match()
+
+await page.locator('button:near(.promo-card)').click();
+
+await page.screenshot({ path: 'screenshot.png', fullPage: true });
+
+
+waiting functions -
+
+expect(locator).toBeAttached()  =  Element is attached
+
+expect(locator).toBeChecked()	= Checkbox is checked
+
+expect(locator).toBeFocused()	=Element is focused
+
+expect(locator).toBeVisible()	=Element is visible
+
+
+
+
+
